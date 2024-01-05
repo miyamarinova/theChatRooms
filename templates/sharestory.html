@@ -1,0 +1,43 @@
+{% include "layout.html" %}
+{% include "navbar.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share A Story</title>
+</head>
+<body>
+    <div class="bg-img">
+    
+    <div>
+        <h1>Share a story and let it go...</h1>
+            <form  action="" method="POST">
+                
+            <div>
+                <textarea class="sharestory" name="story" placeholder="Your Story" rows="3" columns="5"></textarea>
+
+            </div>
+
+            <div class='row'>
+                <div class="col-md-6">
+                    <input class="inputs" name='author' placeholder="Autor">
+                </div>
+                <div class="col-md-6">
+                    <input class="inputs" name='title' placeholder="Title of The Story">
+                </div>
+                
+                
+            </div>
+           
+                <button type="submit" class="btn btn-success btn-block">Share</button>
+            </form>
+        
+      </div>
+    </div>
+    
+
+</body>
+</html>

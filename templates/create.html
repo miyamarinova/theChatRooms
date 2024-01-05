@@ -1,0 +1,12 @@
+{% include "layout.html" %}
+{% include '_messages.html' %}
+{% include 'navbar.html' %}
+<div class="bg-img">
+<form method="post">
+<div class="create-btn col-lg-4 col-md-6 col-sm-6">
+    <input type="text" placeholder="Your Name" name="username" value="{{username}}" />
+    <button type="submit" name="create" class="btn btn-primary btn-block">Create</button>
+</div>
+</form>
+</div>
+{% include 'footer.html' %}

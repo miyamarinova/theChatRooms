@@ -1,0 +1,15 @@
+{% include 'layout.html' %}
+{% include 'navbar.html' %}
+{% include '_messages.html' %}
+
+<form method="post">
+    <h1>Enter an Existing Room</h1>
+    <div class="join_room">
+ 
+        <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+    </div>
+    <div class="enter_btn">
+        <button type="submit" name="join"  class="btn btn-success btn-lg">Join</button>       
+    </div>
+    
+</form>
