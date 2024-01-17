@@ -1,15 +1,50 @@
 {% include 'layout.html' %}
 {% include 'navbar.html' %}
 {% include '_messages.html' %}
+<section>
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-left: 5%">
+        <form method="post" style="margin-left: 5%">
+    <br>
+        <h1 class="join-title">Enter an Existing Room</h1>
+            <div class="join_room">
+                <input type="text" placeholder="Your Name" name="username" value="{{username}}" />
+            </div>
+            <div class="join_room">
+                <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+            </div>
+        <form class="join-btn">
+            <button type="submit" name="join"  class="btn btn-success btn-lg">
+                Join
+            </button>
+            </form>
+        </div>
+    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-left: 5%">
+        <img src="static/css/img/home-page.png" class="head-img" alt="Chat Rooms Image">
+    </div>
 
-<form method="post">
-    <h1>Enter an Existing Room</h1>
-    <div class="join_room">
- 
-        <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+</div>
+</div>
+</section>
+<!-- Features -->
+  <section id="features">
+    <div class="row">
+      <div class="feature-box col-lg-4 col-sm-12">
+        <i class="fa-solid fa-circle-check fa-4x icons"></i>
+        <a href="{{ url_for('sharestory') }}"><h3 style="text-align: center">Share</h3></a>
+        <p>Keep your Privacy and feel Comfortable to Share your stories, your worries, your achievements or your experience.</p>
+      </div>
+
+      <div class="feature-box col-lg-4 col-sm-12">
+        <i class="fa-solid fa-bullseye fa-4x icons"></i>
+        <a href="{{ url_for('create') }}"><h3 style="text-align: center">Connect</h3></a>
+        <p>Connect with others in a private chat or just by reading their stories.</p>
+      </div>
+
+      <div class="feature-box col-lg-4 col-sm-12">
+        <i class="fa-solid fa-heart fa-4x icons"></i>
+        <a href="{{ url_for('chatty') }}"><h3 style="text-align: center">Ask for advice</h3></a>
+        <p>You can either find help from Chatty, our AI trained helper or the others from the community.</p>
+      </div>
     </div>
-    <div class="enter_btn">
-        <button type="submit" name="join"  class="btn btn-success btn-lg">Join</button>       
-    </div>
-    
-</form>
+  </section>

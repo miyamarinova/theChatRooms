@@ -1,20 +1,22 @@
+
 {% include "layout.html" %}
 {% include "navbar.html" %}
 
 <!-- Post Content -->
 <article>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>
-            {{story.story|safe}}
-          </p>
-           <hr>
-           
-          </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h2>{{ story.title }}</h2>
+                <p class="story-main-text" style="max-width: 100%;">
+                    {{story.story|safe}}
+                </p>
+                <p>By: {{ story.author }}</p>
+                <a class="btn btn-primary" href="{{ url_for('get_all_stories') }}">Back to All Stories</a>
+            </div>
+        </div>
     </div>
-  </article>
+</article>
 
-  <hr>
+<hr>
 {% include "footer.html" %}

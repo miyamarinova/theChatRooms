@@ -2,19 +2,95 @@
 {% include '_messages.html' %}
 {% include 'navbar.html' %}
 
+<body>
+  <section>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6" style="padding-left: 5%">
+        <br>
+        <br>
+        <h1 class="head-title">The Chat Rooms</h1>
+        <a name="login" href="join" class="btn btn-primary btn-lg btn-block">Join a Room</a>
+        <a name="signup" href="create" class="btn btn-warning btn-lg btn-block">Create a Room</a>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <br>
+        <img src="static/css/img/home-page.png" class="head-img" alt="Chat Rooms Image">
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+  <section id="features">
+    <div class="row">
+      <div class="feature-box col-lg-4 col-sm-12">
+        <i class="fa-solid fa-circle-check fa-4x icons"></i>
+        <a href="{{ url_for('sharestory') }}"><h3 style="text-align: center">Share</h3></a>
+        <p>Keep your Privacy and feel Comfortable to Share your stories, your worries, your achievements or your experience.</p>
+      </div>
 
+      <div class="feature-box col-lg-4 col-sm-12">
+        <i class="fa-solid fa-bullseye fa-4x icons"></i>
+        <a href="{{ url_for('create') }}"><h3 style="text-align: center">Connect</h3></a>
+        <p>Connect with others in a private chat or just by reading their stories.</p>
+      </div>
 
-<body >
-<div class="bg-img">
-  <div style="margin-top: 150px">
-  <div class="buttons">
-      <a name="login" href="join" class="btn btn-success btn-lg btn-block">Join a Room</a>
+      <div class="feature-box col-lg-4 col-sm-12">
+        <i class="fa-solid fa-heart fa-4x icons"></i>
+        <a href="{{ url_for('chatty') }}"><h3 style="text-align: center">Ask for advice</h3></a>
+        <p>You can either find help from Chatty, our AI trained helper or the others from the community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <div id="carouselExampleIndicators" class="carousel slide reveal" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h2>"When you can tell your story and it doesn't make you cry, you know you have healed."</h2>
+        <h5>Unknown</h5>
+      </div>
+      <div class="carousel-item">
+        <h2>"Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome."</h2>
+        <h5>Brené Brown</h5>
+      </div>
+      <div class="carousel-item">
+        <h2>"The emotion that can break your heart is sometimes the very one that heals it..."</h2>
+        <h5>Nicholas Sparks</h5>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <div class="buttons">
-      <a name="signup" href="create" class="btn btn-warning btn-lg btn-block">Create a Room</a>
-  </div>
-</div>
-</div>
-</body>
 
-{% include 'footer.html' %}
+  </section>
+<br>
+<br>
+
+  </body>
+
+  <!-- FOOTER -->
+  <footer id="footer" style="; /* replace with actual footer height */">
+    <h6 class="footer-brand" style="margin: 10px 10px; text-align:center;">The Chat rooms</h6>
+    <a href="mailto:miyamarinova@gmail.com" class="social-links" style="margin: 0px auto"><i
+        class="fa-solid fa-envelope fa-xl footer-sym"></i></a>
+  </footer>
+  <!-- JavaScript -->
+  <!-- jQuery first, then Bootstrap JS-->
+  <script src="static/images/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+
+
+
