@@ -59,12 +59,12 @@ def create():
     if request.method == "POST":
         username = request.form.get("username")
         if not username:
-            flash("PLease insert a name")
+            flash("Please insert a name")
             return redirect(next or url_for("create"))
         else:
             code = generate_unique_code(4)
             room = code
-            rooms[room] = {"members" : 0, "messages": []}
+            rooms[room] = {"members": 0, "messages": []}
             session["room"] = room
             session["username"] = username
             return redirect(url_for("room"))
@@ -140,10 +140,6 @@ def message(data):
     send(content, to=room)
     rooms[room]["messages"].append(content)
     print(f"{session.get('username')} said: {data['data']}", to=room)
-
-@app.route("/aboutus", methods=["POST", "GET"])
-def aboutus():
-    return render_template("aboutus.html")
 
 @app.route("/sharestory", methods=["POST", "GET"])
 def sharestory():
